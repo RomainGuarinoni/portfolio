@@ -5,7 +5,8 @@
     </div>
     <div class="pages">
       <div class="first" id="first-page"><Home /></div>
-      <div class="second"></div>
+      <div class="second" id="second-page"><Aboutme /></div>
+      <div class="third" id="third-page"></div>
     </div>
   </div>
 </template>
@@ -13,11 +14,13 @@
 <script>
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+import Aboutme from "./components/Aboutme";
 export default {
   name: "App",
   components: {
     Navbar,
     Home,
+    Aboutme,
   },
 };
 </script>
@@ -58,16 +61,18 @@ export default {
   scroll-behavior: smooth;
 }
 .first,
-.second {
+.second,
+.third {
   width: 100%;
   height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
 }
-.first {
+.first,
+.second {
   background: var(--primary);
 }
-.second {
+.third {
   background: blue;
 }
 a {

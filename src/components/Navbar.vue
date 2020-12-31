@@ -6,11 +6,11 @@
       </div>
       <div class="nav-items-box">
         <div class="nav-items">
-          <p>about me</p>
+          <p><a href="#second-page">about me</a></p>
           <span></span>
         </div>
         <div class="nav-items">
-          <p>projets</p>
+          <a href="#third-page"><p>projets</p></a>
           <span></span>
         </div>
         <div class="nav-items">
