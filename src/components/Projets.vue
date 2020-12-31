@@ -74,7 +74,7 @@ export default {
         {
           title: "Steam market Notifier",
           description:
-            "Un store pour pouvoir choisir des skins csgo au bon prix",
+            "Un store pour pouvoir choisir des skins d'arme csgo au bon prix",
           stack: ["Vue.js", "gsap", "AOS", "github Pages"],
           img: require("../assets/steam.jpg"),
         },
@@ -185,6 +185,10 @@ h1 {
   box-sizing: border-box;
   box-shadow: 0px 0px 12px 2px rgba(160, 116, 116, 0.25);
   border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .caroussel-content {
   display: flex;
@@ -242,6 +246,11 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: all ease 200ms;
+}
+.decouvrir :hover {
+  font-weight: bold;
 }
 .decouvrir p {
   margin: 5px 10px;
