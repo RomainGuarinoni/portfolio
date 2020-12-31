@@ -2,7 +2,7 @@
   <div class="navBox">
     <div class="box">
       <div class="logo">
-        <p>Portfolio</p>
+        <p><a href="#first-page">Portfolio</a></p>
       </div>
       <div class="nav-items-box">
         <div class="nav-items">

@@ -4,7 +4,7 @@
       <Navbar />
     </div>
     <div class="pages">
-      <div class="first"></div>
+      <div class="first" id="first-page"><Home /></div>
       <div class="second"></div>
     </div>
   </div>
@@ -12,10 +12,12 @@
 
 <script>
 import Navbar from "./components/Navbar";
+import Home from "./components/Home";
 export default {
   name: "App",
   components: {
     Navbar,
+    Home,
   },
 };
 </script>
@@ -36,6 +38,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -52,6 +55,7 @@ export default {
   z-index: 1;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 .first,
 .second {
@@ -65,5 +69,9 @@ export default {
 }
 .second {
   background: blue;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 </style>
