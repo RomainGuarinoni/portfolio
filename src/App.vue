@@ -1,97 +1,69 @@
 <template>
   <div id="app">
-    <div class="sticky">
-      <p>yyeaahh</p>
+    <div class="nav">
+      <Navbar />
     </div>
-    <div class="test">
-      <div class="first">
-        <h1>Scroll vers le bas</h1>
-        <p><a href="#test">Hello</a></p>
-      </div>
-      <div class="second">
-        <h1 id="test">test</h1>
-      </div>
+    <div class="pages">
+      <div class="first"></div>
+      <div class="second"></div>
     </div>
   </div>
 </template>
 
 <script>
+import Navbar from "./components/Navbar";
 export default {
   name: "App",
+  components: {
+    Navbar,
+  },
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  --primary: #061b20;
+  --txt: #f2f2f2;
+  --light-brown: #a4978e;
+  --brown: #be9063;
   position: absolute;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  text-align: center;
-  scroll-snap-type: y mandatory;
-}
-.test {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  position: absolute;
-  scroll-behavior: smooth;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  text-align: center;
-  z-index: 1;
-  scroll-snap-type: y mandatory;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 ::-webkit-scrollbar {
   width: 0;
 }
-a {
-  color: white;
-}
-.sticky {
-  color: rgba(9255, 255, 255);
-  background: rgba(160, 35, 35, 0.116);
-  top: 0px;
-  z-index: 2;
-  position: -webkit-sticky !important;
-  position: sticky !important;
-}
 .nav {
-  position: -webkit-sticky;
-  position: sticky;
-}
-h1 {
-  padding: 0;
-  margin: 0;
-  color: white;
-}
-.first {
   width: 100%;
-  height: 100%;
-  background: blue;
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
+  position: relative;
+  z-index: 2;
 }
+.pages {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.first,
 .second {
   width: 100%;
-  height: 100%;
-  background: red;
+  height: 100vh;
   scroll-snap-align: start;
   scroll-snap-stop: normal;
 }
-
-.second,
 .first {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 1;
-  justify-content: center;
+  background: var(--primary);
+}
+.second {
+  background: blue;
 }
 </style>
