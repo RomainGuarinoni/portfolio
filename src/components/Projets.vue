@@ -7,35 +7,37 @@
       </div>
       <div class="caroussel-box">
         <div class="caroussel-box-template">
-          <div class="caroussel-left">
-            <h2>{{ projets[this.index].title }}</h2>
-            <p>{{ projets[this.index].description }}</p>
-            <div class="caroussel-stack">
-              <div
-                class="stack-item"
-                v-for="(stack, index) in projets[this.index].stack"
-                :key="index"
-              >
-                <p>{{ stack }}</p>
+          <div class="caroussel-content">
+            <div class="caroussel-left">
+              <h2>{{ projets[this.index].title }}</h2>
+              <p>{{ projets[this.index].description }}</p>
+              <div class="caroussel-stack">
+                <div
+                  class="stack-item"
+                  v-for="(stack, index) in projets[this.index].stack"
+                  :key="index"
+                >
+                  <p>{{ stack }}</p>
+                </div>
+              </div>
+              <div class="bouton-box">
+                <div class="decouvrir">
+                  <p>découvrir</p>
+                </div>
               </div>
             </div>
-            <div class="bouton-box">
-              <div class="decouvrir">
-                <p>découvrir</p>
-              </div>
+            <div class="caroussel-right">
+              <img :src="projets[this.index].img" alt="" />
             </div>
           </div>
-          <div class="caroussel-right">
-            <img :src="projets[this.index].img" alt="" />
+          <div class="caroussel-point">
+            <div class="point" :class="{ point_selected: index == 0 }"></div>
+            <div class="point" :class="{ point_selected: index == 1 }"></div>
+            <div class="point" :class="{ point_selected: index == 2 }"></div>
+            <div class="point" :class="{ point_selected: index == 3 }"></div>
+            <div class="point" :class="{ point_selected: index == 4 }"></div>
+            <div class="point" :class="{ point_selected: index == 5 }"></div>
           </div>
-        </div>
-        <div class="caroussel-point">
-          <div class="point" :class="{ point_selected: index == 0 }"></div>
-          <div class="point" :class="{ point_selected: index == 1 }"></div>
-          <div class="point" :class="{ point_selected: index == 2 }"></div>
-          <div class="point" :class="{ point_selected: index == 3 }"></div>
-          <div class="point" :class="{ point_selected: index == 4 }"></div>
-          <div class="point" :class="{ point_selected: index == 5 }"></div>
         </div>
       </div>
       <div class="chevron" @click="increase">
@@ -50,6 +52,7 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
 export default {
   data() {
     return {
@@ -63,6 +66,33 @@ export default {
           img: require("../assets/letsjam.jpg"),
         },
         {
+          title: "Portfolio",
+          description: "Mon portfolio actuel",
+          stack: ["Vue.js", "gsap", "github Pages"],
+          img: require("../assets/portfolio.jpg"),
+        },
+        {
+          title: "Steam market Notifier",
+          description:
+            "Un store pour pouvoir choisir des skins csgo au bon prix",
+          stack: ["Vue.js", "gsap", "AOS", "github Pages"],
+          img: require("../assets/steam.jpg"),
+        },
+
+        {
+          title: "Inspiring music Theory",
+          description:
+            "Un jeux de lecture de note pour un projet avec une école de musique",
+          stack: ["Vue.js", "vexflow"],
+          img: require("../assets/jeux.jpg"),
+        },
+        {
+          title: "Exam Answer Interface",
+          description: "une petite web App qui permet de faire des QCM",
+          stack: ["VHTML", "CSS", "javascript"],
+          img: require("../assets/qcm.jpg"),
+        },
+        {
           title: "Steam market Notifier",
           description:
             "Un store pour pouvoir choisir des skins csgo au bon prix",
@@ -74,18 +104,26 @@ export default {
   },
   methods: {
     increase() {
-      if (this.index == 5) {
-        this.index = 0;
-      } else {
-        this.index++;
-      }
+      gsap.to(".caroussel-content", { duration: 0.3, opacity: 0 });
+      setTimeout(() => {
+        if (this.index == 5) {
+          this.index = 0;
+        } else {
+          this.index++;
+        }
+        gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
+      }, 300);
     },
     decrease() {
-      if (this.index == 0) {
-        this.index = 5;
-      } else {
-        this.index--;
-      }
+      gsap.to(".caroussel-content", { duration: 0.3, opacity: 0 });
+      setTimeout(() => {
+        if (this.index == 0) {
+          this.index = 5;
+        } else {
+          this.index--;
+        }
+        gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
+      }, 300);
     },
   },
 };
@@ -147,10 +185,14 @@ h1 {
   box-sizing: border-box;
   box-shadow: 0px 0px 12px 2px rgba(160, 116, 116, 0.25);
   border-radius: 20px;
+}
+.caroussel-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  height: 100%;
 }
 .caroussel-right img {
   width: 500px;
