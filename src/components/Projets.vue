@@ -6,7 +6,29 @@
         <font-awesome-icon :icon="['fas', 'chevron-right']" />
       </div>
       <div class="caroussel-box">
-        <div class="caroussel-box-template"></div>
+        <div class="caroussel-box-template">
+          <div class="caroussel-left">
+            <h2>{{ projets[this.index].title }}</h2>
+            <p>{{ projets[this.index].description }}</p>
+            <div class="caroussel-stack">
+              <div
+                class="stack-item"
+                v-for="(stack, index) in projets[this.index].stack"
+                :key="index"
+              >
+                <p>{{ stack }}</p>
+              </div>
+            </div>
+            <div class="bouton-box">
+              <div class="decouvrir">
+                <p>découvrir</p>
+              </div>
+            </div>
+          </div>
+          <div class="caroussel-right">
+            <img :src="projets[this.index].img" alt="" />
+          </div>
+        </div>
         <div class="caroussel-point">
           <div class="point" :class="{ point_selected: index == 0 }"></div>
           <div class="point" :class="{ point_selected: index == 1 }"></div>
@@ -32,6 +54,22 @@ export default {
   data() {
     return {
       index: 0,
+      projets: [
+        {
+          title: "letsJam",
+          description:
+            "Une application pour gérer les réservations des salles de musique de mon école",
+          stack: ["Vue.js", "node.js", "websocket", "mongodb", "express"],
+          img: require("../assets/letsjam.jpg"),
+        },
+        {
+          title: "Steam market Notifier",
+          description:
+            "Un store pour pouvoir choisir des skins csgo au bon prix",
+          stack: ["Vue.js", "gsap", "AOS", "github Pages"],
+          img: require("../assets/steam.jpg"),
+        },
+      ],
     };
   },
   methods: {
@@ -71,6 +109,7 @@ h1 {
   border-bottom: 4px solid var(--txt);
 }
 .caroussel {
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,6 +147,32 @@ h1 {
   box-sizing: border-box;
   box-shadow: 0px 0px 12px 2px rgba(160, 116, 116, 0.25);
   border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.caroussel-right img {
+  width: 500px;
+}
+.caroussel-left {
+  width: 300px;
+}
+.caroussel-stack {
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.stack-item {
+  background: rgba(196, 196, 196, 0.28);
+  border: none;
+  border-radius: 15px;
+  margin: 10px;
+}
+.stack-item p {
+  margin: 5px 10px;
 }
 .caroussel-point {
   display: flex;
@@ -115,6 +180,7 @@ h1 {
   width: 300px;
   margin-top: 30px;
 }
+
 .point {
   width: 13px;
   height: 13px;
@@ -123,7 +189,20 @@ h1 {
   border-radius: 100%;
 }
 .point_selected {
-  background: var(--brown);
+  background: rgb(104, 61, 13);
+}
+.decouvrir {
+  background: rgba(126, 117, 117, 0.21);
+  border: 2px solid var(--brown);
+  border-radius: 15px;
+  margin-top: 20px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.decouvrir p {
+  margin: 5px 10px;
 }
 .down {
   color: var(--txt);
