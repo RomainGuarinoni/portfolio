@@ -14,7 +14,7 @@
           <span></span>
         </div>
         <div class="nav-items">
-          <p>formations</p>
+          <a href="#fourth-page"><p>formations</p></a>
           <span></span>
         </div>
         <div class="nav-items">
