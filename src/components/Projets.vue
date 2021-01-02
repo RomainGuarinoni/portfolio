@@ -31,12 +31,36 @@
             </div>
           </div>
           <div class="caroussel-point">
-            <div class="point" :class="{ point_selected: index == 0 }"></div>
-            <div class="point" :class="{ point_selected: index == 1 }"></div>
-            <div class="point" :class="{ point_selected: index == 2 }"></div>
-            <div class="point" :class="{ point_selected: index == 3 }"></div>
-            <div class="point" :class="{ point_selected: index == 4 }"></div>
-            <div class="point" :class="{ point_selected: index == 5 }"></div>
+            <div
+              class="point"
+              @click="goTo(0)"
+              :class="{ point_selected: index == 0 }"
+            ></div>
+            <div
+              class="point"
+              @click="goTo(1)"
+              :class="{ point_selected: index == 1 }"
+            ></div>
+            <div
+              class="point"
+              @click="goTo(2)"
+              :class="{ point_selected: index == 2 }"
+            ></div>
+            <div
+              class="point"
+              @click="goTo(3)"
+              :class="{ point_selected: index == 3 }"
+            ></div>
+            <div
+              class="point"
+              @click="goTo(4)"
+              :class="{ point_selected: index == 4 }"
+            ></div>
+            <div
+              class="point"
+              @click="goTo(5)"
+              :class="{ point_selected: index == 5 }"
+            ></div>
           </div>
         </div>
       </div>
@@ -122,6 +146,13 @@ export default {
         } else {
           this.index--;
         }
+        gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
+      }, 300);
+    },
+    goTo(index) {
+      gsap.to(".caroussel-content", { duration: 0.3, opacity: 0 });
+      setTimeout(() => {
+        this.index = index;
         gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
       }, 300);
     },
@@ -233,6 +264,7 @@ h1 {
   background: var(--light-brown);
   border: none;
   border-radius: 100%;
+  cursor: pointer;
 }
 .point_selected {
   background: rgb(104, 61, 13);
