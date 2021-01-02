@@ -71,6 +71,53 @@ export default {};
 </script>
 
 <style scoped>
+@media all and (max-width: 1350px) {
+  .boxall {
+    height: 95% !important;
+    padding-top: 120px !important;
+    position: relative;
+  }
+  .pres {
+    height: 280px !important;
+  }
+  p {
+    font-size: 14px !important;
+    line-height: 31px;
+  }
+  h1 {
+    font-size: 30px !important;
+    letter-spacing: 5px;
+  }
+  .svg img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+  .prog {
+    height: 200px !important;
+    width: 100% !important;
+  }
+  .prog h3 {
+    margin: 20px 0 0 0 !important;
+    text-align: center;
+  }
+  .tech {
+    justify-content: space-around !important;
+  }
+  .tech-item {
+    font-size: 12px !important;
+  }
+}
+@media all and (max-width: 696px) {
+  .down {
+    display: none !important;
+  }
+  h1 {
+    text-align: center !important;
+  }
+  .boxall {
+    position: static !important;
+  }
+}
 * {
   margin: 0;
   padding: 0;

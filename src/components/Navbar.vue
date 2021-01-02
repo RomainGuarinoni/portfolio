@@ -31,9 +31,28 @@ export default {};
 </script>
 
 <style scoped>
+@media all and (max-width: 860px) {
+  .nav-items-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 !important;
+  }
+}
+@media all and (max-width: 634px) {
+  .nav-items-box {
+    display: none !important;
+  }
+  .logo {
+    width: 100% !important;
+    text-align: center;
+  }
+}
 .navBox {
   width: 100%;
   background-color: none;
+  background: var(--primary);
 }
 .box {
   display: flex;

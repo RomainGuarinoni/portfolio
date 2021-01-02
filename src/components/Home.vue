@@ -51,6 +51,52 @@ export default {};
 </script>
 
 <style scoped>
+@media all and (max-width: 1489px) {
+  .content {
+    width: 100% !important;
+    justify-content: space-around !important;
+  }
+}
+@media all and (max-width: 1100px) {
+  .circle {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(170, 133, 95, 0.33) 0%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      center/65% no-repeat url("../assets/moi.png");
+    width: 300px !important;
+    height: 300px !important;
+    border: none;
+    border-radius: 100%;
+  }
+  span {
+    font-weight: bold;
+    font-size: 43px !important;
+    letter-spacing: 0.15em;
+  }
+  p {
+    letter-spacing: 0.075em;
+    font-size: 18px !important;
+  }
+}
+@media all and (max-width: 799px) {
+  .left {
+    text-align: center !important;
+  }
+  .brand {
+    justify-content: space-around !important;
+    width: 100% !important;
+  }
+}
+@media all and (max-width: 696px) {
+  .boxAll {
+    display: block !important;
+    position: static !important;
+  }
+}
 .boxAll {
   position: absolute;
   top: 0;

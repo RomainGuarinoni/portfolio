@@ -97,6 +97,13 @@ export default {
           img: require("../assets/portfolio.jpg"),
         },
         {
+          title: "Inspiring music Theory",
+          description:
+            "Un jeux de lecture de note pour un projet avec une école de musique",
+          stack: ["Vue.js", "vexflow"],
+          img: require("../assets/jeux.jpg"),
+        },
+        {
           title: "Steam market Notifier",
           description:
             "Un store pour pouvoir choisir des skins d'arme csgo au bon prix",
@@ -104,13 +111,6 @@ export default {
           img: require("../assets/steam.jpg"),
         },
 
-        {
-          title: "Inspiring music Theory",
-          description:
-            "Un jeux de lecture de note pour un projet avec une école de musique",
-          stack: ["Vue.js", "vexflow"],
-          img: require("../assets/jeux.jpg"),
-        },
         {
           title: "Exam Answer Interface",
           description: "une petite web App qui permet de faire des QCM",
@@ -297,7 +297,7 @@ h1 {
   transition: all ease 200ms;
 }
 .decouvrir :hover {
-  font-weight: bold;
+  transform: scale(1.05);
 }
 .decouvrir p {
   margin: 5px 10px;
