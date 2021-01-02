@@ -22,7 +22,7 @@
               </div>
               <div class="bouton-box">
                 <div class="decouvrir">
-                  <p>découvrir</p>
+                  <p @click="pushToDetail(index)">découvrir</p>
                 </div>
               </div>
             </div>
@@ -77,6 +77,7 @@
 
 <script>
 import { gsap } from "gsap";
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -126,6 +127,9 @@ export default {
       ],
     };
   },
+  computed: {
+    ...mapState(["retour", "indexRetour"]),
+  },
   methods: {
     increase() {
       gsap.to(".caroussel-content", { duration: 0.3, opacity: 0 });
@@ -156,6 +160,17 @@ export default {
         gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
       }, 300);
     },
+    pushToDetail(index) {
+      let path = "/projet/" + index;
+      this.$router.push({ path: path });
+    },
+  },
+  mounted: function() {
+    if (this.retour == true) {
+      this.index = this.indexRetour;
+      document.getElementById("third-page").scrollIntoView();
+      this.$store.dispatch("changeretour", { index: 0 });
+    }
   },
 };
 </script>
