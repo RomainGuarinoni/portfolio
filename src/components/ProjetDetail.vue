@@ -26,9 +26,9 @@
         >
       </div>
       <div class="description">
-        <p v-for="(line, index) in projet[this.id].description" :key="index">
-          {{ line }}
-        </p>
+        <div v-for="(line, index) in projet[this.id].description" :key="index">
+          <p v-html="line"></p>
+        </div>
       </div>
       <div class="stack">
         <div
@@ -55,6 +55,7 @@
 </template>
 
 <script>
+//<span style='color : var(--brown);'>
 export default {
   props: ["id"],
   data() {
@@ -66,9 +67,9 @@ export default {
           site: "https://letsjamimt.herokuapp.com/#/salle",
           git: "https://github.com/RomainGuarinoni/letsJam",
           description: [
-            "Mon école possède 2 salles de musiques pour les étudiants. Ces derniers doivent poster un message sur une conv whatsapp lorsqu’ils veulent prendrre une salle ou la libérer.",
-            "Cette application permet de simplifier ce processus et de le rendre plus moderne, en proposant simplement de cliquer sur un bouton réserver ou libérer.",
-            "Les étudiant peuvent voir rapidemment si la salle est libre ou pas, et le statut des salles se met automatiquement à jour, sans recharger la page, grâce au websocket. ",
+            "<p>Mon école possède 2 salles de musiques pour les étudiants. Ces derniers doivent poster un message sur une conv whatsapp lorsqu’ils veulent prendrre une salle ou la libérer.</p>",
+            "<p>Cette application permet de <span style='color : var(--brown);'>simplifier ce processus </span> et de le rendre <span style='color : var(--brown);'>plus moderne</span>, en proposant simplement de cliquer sur un bouton réserver ou libérer.</p>",
+            "<p>Les étudiant peuvent <span style='color : var(--brown);'>voir rapidemment </span>si la salle est libre ou pas, et le statut des salles se met automatiquement à jour, sans recharger la page, grâce au <span style='color : var(--brown);'>websocket</span>.</p> ",
           ],
           stack: [
             "Vue.js",
