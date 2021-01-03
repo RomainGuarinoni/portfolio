@@ -81,6 +81,14 @@ export default {
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
+@media all and (max-width: 768px) {
+  .pages {
+    scroll-snap-type: none !important;
+  }
+  .down {
+    display: none !important;
+  }
+}
 .pages-item {
   width: 100%;
   height: 100vh;

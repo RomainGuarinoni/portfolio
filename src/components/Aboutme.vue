@@ -67,24 +67,18 @@
 </template>
 
 <script>
-export default {
-  mounted: () => {
-    // eslint-disable-next-line no-unused-vars
-    var observer = new IntersectionObserver(() => {
-      console.log("visible");
-    }, {});
-    var target = document.getElementById("fifth-page");
-    observer.observe(target);
-  },
-};
+export default {};
 </script>
 
 <style scoped>
 @media all and (max-width: 1350px) {
   .boxall {
-    height: 95% !important;
-    padding-top: 120px !important;
+    height: 85% !important;
+    padding-top: 130px !important;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
   .pres {
     height: 280px !important;

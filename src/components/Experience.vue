@@ -92,6 +92,17 @@ export default {};
 </script>
 
 <style scoped>
+@media all and (max-width: 1207px) {
+  .date {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .date p {
+    margin-right: 50px !important;
+  }
+}
 .boxAll {
   position: relative;
   height: 88%;
@@ -125,7 +136,7 @@ h1 {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 70%;
+  width: 90%;
 }
 .date {
   margin-top: 7px;

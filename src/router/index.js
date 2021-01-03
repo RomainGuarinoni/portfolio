@@ -11,6 +11,11 @@ const routes = [
     component: AppContainer,
   },
   {
+    path: "/first-page",
+    name: "App",
+    component: AppContainer,
+  },
+  {
     path: "/projet/:id",
     component: ProjetDetail,
     props: true,

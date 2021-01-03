@@ -68,6 +68,33 @@
         <font-awesome-icon :icon="['fas', 'chevron-right']" />
       </div>
     </div>
+    <div class="projet-liste">
+      <div class="item" v-for="(item, index) in projets" :key="index">
+        <div class="caroussel-content">
+          <div class="caroussel-left">
+            <h2>{{ item.title }}</h2>
+            <p>{{ item.description }}</p>
+            <div class="caroussel-stack">
+              <div
+                class="stack-item"
+                v-for="(stack, index) in item.stack"
+                :key="index"
+              >
+                <p>{{ stack }}</p>
+              </div>
+            </div>
+            <div class="bouton-box">
+              <div class="decouvrir">
+                <p @click="pushToDetail(index)">découvrir</p>
+              </div>
+            </div>
+          </div>
+          <div class="caroussel-right">
+            <img :src="item.img" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
     <a href="#fourth-page"
       ><div class="down">
         <font-awesome-icon :icon="['fas', 'arrow-down']" /></div
@@ -131,6 +158,10 @@ export default {
     ...mapState(["retour", "indexRetour"]),
   },
   methods: {
+    showCaroussel() {
+      return document.getElementById("App").matchMedia("(max-width : 1176px")
+        .matches;
+    },
     increase() {
       gsap.to(".caroussel-content", { duration: 0.3, opacity: 0 });
       setTimeout(() => {
@@ -176,6 +207,31 @@ export default {
 </script>
 
 <style scoped>
+@media all and (max-width: 768px) {
+  .caroussel {
+    display: none !important;
+  }
+  .projet-liste {
+    display: block !important;
+  }
+  .caroussel-content {
+    margin: 50px 0 !important;
+  }
+  .boxall h1 {
+    width: 100% !important;
+    margin: 0;
+    text-align: center;
+  }
+  .bouton-box {
+    margin: 20px 0 !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+}
+.projet-liste {
+  display: none;
+}
 .boxall {
   height: 83%;
   padding-top: 170px;
