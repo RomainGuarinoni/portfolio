@@ -120,6 +120,9 @@ export default {};
   .boxall {
     position: static !important;
   }
+  .bottom .svg {
+    display: none !important;
+  }
 }
 * {
   margin: 0;

@@ -217,6 +217,9 @@ export default {
   .caroussel-content {
     margin: 50px 0 !important;
   }
+  .boxall {
+    overflow: scroll !important;
+  }
   .boxall h1 {
     width: 100% !important;
     margin: 0;

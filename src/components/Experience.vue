@@ -110,7 +110,7 @@ export default {};
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 110px;
+  padding-top: 130px;
   color: var(--txt);
 }
 .underline {

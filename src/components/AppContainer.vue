@@ -80,8 +80,9 @@ export default {
   z-index: 1;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 1204px) {
   .pages {
     scroll-snap-type: none !important;
   }
@@ -95,7 +96,6 @@ export default {
   scroll-snap-align: start;
   scroll-snap-stop: normal;
   background: var(--primary);
-  border: 2px solid red;
 }
 
 a {
