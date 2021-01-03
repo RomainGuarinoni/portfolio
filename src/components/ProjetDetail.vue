@@ -94,8 +94,9 @@ export default {
           description: [
             "<p> La première itération de mon portfolio ! </p>",
             "<p> Construit avec<span style='color : var(--brown);'> Vue.js </span>, il permet de mettre en avant mes projets ainsi quue ma formation et mes expériences professionnelles </p>",
+            "<p>La maquette a été conçu sur Figma :<span style='color : var(--brown);'> <a href='https://www.figma.com/file/7pt98UnXs6YurXuRW47Z3T/Portfolio?node-id=0%3A1'>Cliquez ici</a></span></p>",
           ],
-          stack: ["Vues.js", "Gsap", "Github Pages"],
+          stack: ["Vues.js", "Gsap", "Github Pages", "Figma"],
           fonctionnalite: [""],
         },
 

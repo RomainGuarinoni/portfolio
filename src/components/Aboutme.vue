@@ -1,5 +1,5 @@
 <template>
-  <div class="boxall">
+  <div class="boxall" id="aboutme">
     <div class="top">
       <div class="pres">
         <h1><span class="underline">Qui suis</span>-je ?</h1>
@@ -67,7 +67,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted: () => {
+    // eslint-disable-next-line no-unused-vars
+    var observer = new IntersectionObserver(() => {
+      console.log("visible");
+    }, {});
+    var target = document.getElementById("fifth-page");
+    observer.observe(target);
+  },
+};
 </script>
 
 <style scoped>

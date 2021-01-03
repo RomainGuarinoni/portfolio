@@ -47,7 +47,19 @@
 </template>
 
 <script>
-export default {};
+import { gsap } from "gsap";
+export default {
+  mounted: () => {
+    let tl = gsap.timeline();
+    tl.from(".left p", { duration: 0.5, opacity: 0, y: -50, stagger: 0.1 });
+    tl.from(".right", { duration: 0.5, opacity: 0, y: 50 });
+    tl.from(".down", {
+      duration: 0.5,
+      opacity: 0,
+      y: -50,
+    });
+  },
+};
 </script>
 
 <style scoped>

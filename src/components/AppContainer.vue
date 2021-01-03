@@ -7,7 +7,8 @@
       <div class="pages-item " id="first-page"><Home /></div>
       <div class="pages-item " id="second-page"><Aboutme /></div>
       <div class="pages-item " id="third-page"><Projets /></div>
-      <div class="pages-item " id="fourth-page"></div>
+      <div class="pages-item " id="fourth-page"><Formations /></div>
+      <div class="pages-item" id="fifth-page"><Experience /></div>
     </div>
   </div>
 </template>
@@ -17,6 +18,8 @@ import Navbar from ".//Navbar";
 import Home from ".//Home";
 import Aboutme from ".//Aboutme";
 import Projets from ".//Projets";
+import Formations from "./Formations";
+import Experience from "./Experience";
 export default {
   name: "App",
   components: {
@@ -24,6 +27,8 @@ export default {
     Home,
     Aboutme,
     Projets,
+    Formations,
+    Experience,
   },
   data() {
     return {
@@ -31,49 +36,6 @@ export default {
       pages: ["first-page", "second-page", "third-page", "fourth-page"],
     };
   },
-  /*mounted: function() {
-    // Variables
-    var isScrolling, start, end, distance;
-    var div = document.getElementById("pages");
-    // eslint-disable-next-line no-unused-vars
-    var pages = this.pages;
-    // eslint-disable-next-line no-unused-vars
-    var index = this.index;
-    // Listen for scroll events
-    div.addEventListener(
-      "scroll",
-      function() {
-        // Set starting position
-        if (!start) {
-          start = window.pageYOffset;
-          console.log("la valeur de start est : " + start);
-        }
-
-        // Clear our timeout throughout the scroll
-        window.clearTimeout(isScrolling);
-
-        // Set a timeout to run after scrolling ends
-        isScrolling = setTimeout(function() {
-          // Calculate distance
-          end = div.pageYOffset;
-          distance = end - start;
-
-          // Run the callback
-          console.log("oui");
-          console.log(distance + start + end);
-          index++;
-          document.getElementById(pages[index]).scrollIntoView();
-          console.log(index);
-
-          // Reset calculations
-          start = null;
-          end = null;
-          distance = null;
-        }, 1000);
-      },
-      false
-    );
-  },*/
 };
 </script>
 

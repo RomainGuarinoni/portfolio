@@ -18,7 +18,7 @@
           <span></span>
         </div>
         <div class="nav-items">
-          <p>expériences</p>
+          <a href="#fifth-page"><p>expériences</p></a>
           <span></span>
         </div>
       </div>
