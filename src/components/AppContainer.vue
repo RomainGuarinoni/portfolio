@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import Navbar from ".//Navbar";
-import Home from ".//Home";
-import Aboutme from ".//Aboutme";
-import Projets from ".//Projets";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import Aboutme from "./Aboutme";
+import Projets from "./Projets";
 import Formations from "./Formations";
 import Experience from "./Experience";
 export default {

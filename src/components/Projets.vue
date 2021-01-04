@@ -163,33 +163,42 @@ export default {
         .matches;
     },
     increase() {
-      gsap.to(".caroussel-content", { duration: 0.3, opacity: 0 });
-      setTimeout(() => {
-        if (this.index == 5) {
-          this.index = 0;
-        } else {
-          this.index++;
-        }
-        gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
-      }, 300);
+      gsap.to(".caroussel-content", {
+        duration: 0.3,
+        opacity: 0,
+        onComplete: () => {
+          if (this.index == 5) {
+            this.index = 0;
+          } else {
+            this.index++;
+          }
+          gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
+        },
+      });
     },
     decrease() {
-      gsap.to(".caroussel-content", { duration: 0.3, opacity: 0 });
-      setTimeout(() => {
-        if (this.index == 0) {
-          this.index = 5;
-        } else {
-          this.index--;
-        }
-        gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
-      }, 300);
+      gsap.to(".caroussel-content", {
+        duration: 0.3,
+        opacity: 0,
+        onComplete: () => {
+          if (this.index == 0) {
+            this.index = 5;
+          } else {
+            this.index--;
+          }
+          gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
+        },
+      });
     },
     goTo(index) {
-      gsap.to(".caroussel-content", { duration: 0.3, opacity: 0 });
-      setTimeout(() => {
-        this.index = index;
-        gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
-      }, 300);
+      gsap.to(".caroussel-content", {
+        duration: 0.3,
+        opacity: 0,
+        onComplete: () => {
+          this.index = index;
+          gsap.to(".caroussel-content", { duration: 0.3, opacity: 1 });
+        },
+      });
     },
     pushToDetail(index) {
       let path = "/projet/" + index;
