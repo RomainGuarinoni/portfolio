@@ -1,26 +1,32 @@
 <template>
   <div class="navBox">
     <div class="box">
-      <div class="logo">
-        <p><a href="#first-page">Portfolio</a></p>
-      </div>
+      <a href="#first-page"
+        ><div class="logo">
+          <p>Portfolio</p>
+        </div></a
+      >
       <div class="nav-items-box">
-        <div class="nav-items">
-          <p><a href="#second-page">about me</a></p>
-          <span></span>
-        </div>
-        <div class="nav-items">
-          <a href="#third-page"><p>projets</p></a>
-          <span></span>
-        </div>
-        <div class="nav-items">
-          <a href="#fourth-page"><p>formations</p></a>
-          <span></span>
-        </div>
-        <div class="nav-items">
-          <a href="#fifth-page"><p>expériences</p></a>
-          <span></span>
-        </div>
+        <a href="#second-page"
+          ><div class="nav-items">
+            <p>about me</p>
+            <span></span></div
+        ></a>
+        <a href="#third-page"
+          ><div class="nav-items">
+            <p>projets</p>
+            <span></span></div
+        ></a>
+        <a href="#fourth-page"
+          ><div class="nav-items">
+            <p>formations</p>
+            <span></span></div
+        ></a>
+        <a href="#fifth-page">
+          <div class="nav-items">
+            <p>expériences</p>
+            <span></span></div
+        ></a>
       </div>
     </div>
   </div>

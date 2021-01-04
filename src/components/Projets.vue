@@ -145,11 +145,11 @@ export default {
           img: require("../assets/qcm.jpg"),
         },
         {
-          title: "Steam market Notifier",
+          title: "Grapheur de fonctions mathématiques",
           description:
-            "Un store pour pouvoir choisir des skins csgo au bon prix",
-          stack: ["Vue.js", "gsap", "AOS", "github Pages"],
-          img: require("../assets/steam.jpg"),
+            "Une application qui permet de visualiser des fonctions mathématiques sur un graphique",
+          stack: ["C prog", "OpenGL", "Gitlab"],
+          img: require("../assets/c.jpg"),
         },
       ],
     };

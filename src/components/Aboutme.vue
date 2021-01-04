@@ -67,7 +67,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      observe: 0,
+    };
+  },
+};
 </script>
 
 <style scoped>

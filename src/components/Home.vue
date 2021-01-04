@@ -51,14 +51,18 @@ import { gsap } from "gsap";
 export default {
   mounted: () => {
     let tl = gsap.timeline();
-    tl.from(".left p", { duration: 0.5, opacity: 0, y: -50, stagger: 0.1 });
-    tl.from(".right", { duration: 0.5, opacity: 0, y: 50 });
-    tl.from(".down", {
-      duration: 2,
-      opacity: 0,
-      y: 500,
-      ease: "elastic.out(0.5, 0.3)",
-    });
+    tl.from(".left p", { duration: 0.5, opacity: 0, y: -50, stagger: 0.1 }, 0);
+    tl.from(".right", { duration: 1, opacity: 0, y: 50 }, 0);
+    tl.from(
+      ".down",
+      {
+        duration: 2,
+        opacity: 0,
+        y: 500,
+        ease: "elastic.out(0.5, 0.3)",
+      },
+      "-=0.9"
+    );
   },
 };
 </script>

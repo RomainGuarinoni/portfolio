@@ -105,9 +105,17 @@ export default {
           date: "Novembre 2020",
           site: "https://github.com/RomainGuarinoni/Inspiring-Music-Theory",
           git: "https://github.com/RomainGuarinoni/Inspiring-Music-Theory",
-          description: ["<p> </p>"],
-          stack: [""],
-          fonctionnalite: [""],
+          description: [
+            "<p> Ce site est un<span style='color : var(--brown);'> mini jeux de lecture de note</span> dans lequel on peut choisir un niveau de difficulté qui correspond à l'écart des notes et une clef.</p>",
+            "<p>Ce jeux a été réalisé dans le cadre d'<span style='color : var(--brown);'>un projet avec un conservatoire </span> dans lequel nous devons créer un site pour aider les élèves à apprendre la musique. </p>",
+            "<p>Dans ce projet, je suis chargé <span style='color : var(--brown);'>d'intégrer entièrement le site </span> et de <span style='color : var(--brown);'> développer des mini-jeux </span> comme celui ci </p>",
+          ],
+          stack: ["vue.js", "vexflow"],
+          fonctionnalite: [
+            "la partition est créée aléatoirement à chaque nouvelle partie",
+            "choisir un niveau de difficulté et la clef de lecture",
+            "Feedback sur sa partie en fonction du temps mis pour le finir et du nombre de fautes",
+          ],
         },
         {
           title: "Steam Market Notifier",
@@ -151,13 +159,20 @@ export default {
           ],
         },
         {
-          title: "",
-          date: "",
-          site: "",
-          git: "",
-          description: ["<p> </p>"],
-          stack: [""],
-          fonctionnalite: [""],
+          title: "Grapheur de fonctions mathématiques",
+          date: "Mars 2020",
+          site: "https://github.com/xThePizzaManx/grapheur_L2",
+          git: "https://github.com/xThePizzaManx/grapheur_L2",
+          description: [
+            "<p> Cette application permet de <span style='color : var(--brown);'> représenter graphiquement une fonction </span> rentré en entré sur un graphique.  </p>",
+            "<p> Ce projet  a été réalisé lors de ma L2 en école d'ingénieur avec 8 autres étudiants.</p>",
+            "<p>Ce projet ma permit <span style='color : var(--brown);'> d'améliorer mes connaissances en C</span> et ma logique </p>",
+          ],
+          stack: ["C prog", "OpenGL", "Gitlab"],
+          fonctionnalite: [
+            "Permet de grapher nimporte qu'elle fonctions avec comme variable x",
+            "Selection de la borne xmin et xmax et du pas pour le graphique",
+          ],
         },
       ],
     };
