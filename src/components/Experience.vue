@@ -105,7 +105,7 @@ export default {};
 }
 .boxAll {
   position: relative;
-  height: 88%;
+  height: 86%;
   overflow-y: scroll;
   display: flex;
   justify-content: center;
@@ -136,10 +136,10 @@ h1 {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 90%;
+  width: 70%;
 }
 .date {
-  margin-top: 7px;
+  width: 200px;
   margin-right: 50px;
 }
 .lieu {

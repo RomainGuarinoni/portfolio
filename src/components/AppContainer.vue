@@ -40,6 +40,14 @@ export default {
 </script>
 
 <style>
+@media all and (max-width: 1440px) {
+  .down {
+    font-size: 15px !important;
+    border: 2px solid var(--txt) !important;
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
 @media all and (max-width: 696px) {
   .pages {
     height: auto !important;
@@ -73,6 +81,11 @@ export default {
   position: relative;
   z-index: 2;
 }
+@media all and (max-width: 1660px) and (min-width: 769px) {
+  .pages {
+    height: 110vh !important;
+  }
+}
 .pages {
   width: 100%;
   height: 100vh;
@@ -82,7 +95,7 @@ export default {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
-@media all and (max-width: 1204px) {
+@media all and (max-width: 768px) {
   .pages {
     scroll-snap-type: none !important;
   }

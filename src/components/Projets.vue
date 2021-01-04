@@ -216,6 +216,20 @@ export default {
 </script>
 
 <style scoped>
+@media all and (max-width: 1440px) {
+  .boxall {
+    height: 88% !important;
+    padding-top: 110px !important;
+  }
+  .caroussel {
+    margin: 0 !important;
+  }
+}
+@media all and (max-width: 1182px) {
+  .caroussel-box-template {
+    width: 850px !important;
+  }
+}
 @media all and (max-width: 768px) {
   .caroussel {
     display: none !important;
@@ -241,9 +255,13 @@ export default {
     justify-content: center;
   }
 }
+.bouton-box {
+  transition: all ease 200ms;
+}
 .projet-liste {
   display: none;
 }
+
 .boxall {
   height: 83%;
   padding-top: 170px;
@@ -353,22 +371,25 @@ h1 {
   background: rgb(104, 61, 13);
 }
 .decouvrir {
-  background: rgba(126, 117, 117, 0.21);
-  border: 2px solid var(--brown);
-  border-radius: 15px;
+  background: var(--brown);
+
+  border-radius: 10px;
   margin-top: 20px;
   width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all ease 200ms;
+  transition: all ease 100ms;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  padding: 6px 17px;
 }
-.decouvrir :hover {
-  transform: scale(1.05);
+.decouvrir:hover {
+  transform: scale(1.1);
 }
 .decouvrir p {
-  margin: 5px 10px;
+  margin: 0;
 }
 .down {
   color: var(--txt);

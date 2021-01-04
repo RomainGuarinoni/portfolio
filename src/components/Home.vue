@@ -114,6 +114,11 @@ export default {
     position: static !important;
   }
 }
+@media all and (max-width: 1660px) and (min-width: 769px) {
+  .down {
+    bottom: 80px !important;
+  }
+}
 .boxAll {
   position: absolute;
   top: 0;

@@ -39,6 +39,14 @@ export default {};
 </script>
 
 <style scoped>
+@media all and (max-width: 1440px) {
+  .boxAll {
+    padding-top: 110px !important;
+    height: 87% !important;
+  }
+}
+@media all and (max-width: 1405px) {
+}
 .boxAll {
   position: relative;
   height: 83%;

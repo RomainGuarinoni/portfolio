@@ -67,24 +67,18 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      observe: 0,
-    };
-  },
-};
+export default {};
 </script>
 
 <style scoped>
-@media all and (max-width: 1350px) {
+@media all and (max-width: 1440px) {
   .boxall {
     height: 85% !important;
     padding-top: 130px !important;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center !important;
   }
   .pres {
     height: 280px !important;
@@ -101,9 +95,15 @@ export default {
     width: 200px !important;
     height: 200px !important;
   }
+  .svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .prog {
     height: 200px !important;
-    width: 100% !important;
+    width: 400px !important;
   }
   .prog h3 {
     margin: 20px 0 0 0 !important;
@@ -114,6 +114,16 @@ export default {
   }
   .tech-item {
     font-size: 12px !important;
+  }
+  .bottom {
+    display: flex !important;
+    flex: 1;
+    justify-content: space-around !important;
+  }
+}
+@media all and (max-width: 1024px) {
+  .svg {
+    display: none;
   }
 }
 @media all and (max-width: 696px) {
@@ -139,6 +149,9 @@ export default {
   height: 83%;
   padding-top: 170px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 p {
   font-size: 17px;
@@ -194,7 +207,7 @@ h3 {
 }
 .tech-item {
   border: 3px solid var(--light-brown);
-  padding: 5px;
+  padding: 7px 15px;
   margin: 20px 40px 0 0;
   border-radius: 5px;
   display: flex;
