@@ -10,8 +10,8 @@
         </div>
         <div class="brand">
           <p>
-            <a href="https://www.facebook.com/romain.bat17/" target="_blank"
-              ><font-awesome-icon :icon="['fab', 'facebook-square']"
+            <a href="mailto:romain.guar01@gmail.com"
+              ><font-awesome-icon :icon="['far', 'envelope']"
             /></a>
           </p>
           <p>

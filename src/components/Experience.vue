@@ -153,6 +153,17 @@ h1 {
     width: 80% !important;
   }
 }
+@media all and (max-width: 425px) {
+  .date {
+    width: 100% !important;
+  }
+  .item {
+    width: 90% !important;
+  }
+  .box-item {
+    width: 100% !important;
+  }
+}
 @media all and (max-width: 856px) {
   .box-item {
     margin-top: 250px !important;
