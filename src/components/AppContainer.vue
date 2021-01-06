@@ -93,6 +93,7 @@ export default {
   z-index: 1;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 @media all and (max-width: 768px) {
   .pages {
