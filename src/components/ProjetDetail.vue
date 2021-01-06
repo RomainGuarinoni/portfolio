@@ -187,6 +187,14 @@ export default {
 </script>
 
 <style scoped>
+@media all and (max-width: 768px) {
+  .description {
+    width: 100% !important;
+  }
+  .content {
+    width: 80% !important;
+  }
+}
 .projetBox {
   background: var(--primary);
   width: 100%;

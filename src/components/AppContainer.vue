@@ -83,7 +83,7 @@ export default {
 }
 @media all and (max-width: 1660px) and (min-width: 769px) {
   .pages {
-    height: 110vh !important;
+    height: 100vh !important;
   }
 }
 .pages {
@@ -93,7 +93,6 @@ export default {
   z-index: 1;
   overflow-y: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
 }
 @media all and (max-width: 768px) {
   .pages {

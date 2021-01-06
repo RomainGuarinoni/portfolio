@@ -229,6 +229,9 @@ export default {
   .caroussel-box-template {
     width: 850px !important;
   }
+  .caroussel-right img {
+    width: 400px !important;
+  }
 }
 @media all and (max-width: 768px) {
   .caroussel {
@@ -253,6 +256,26 @@ export default {
     width: 100% !important;
     display: flex;
     justify-content: center;
+  }
+  ::-webkit-scrollbar {
+    width: 2px !important;
+    color: var(--brown) !important;
+  }
+}
+@media all and (max-width: 1185px) {
+  .caroussel-left {
+    font-size: 15px !important;
+  }
+}
+@media all and (max-width: 768px) {
+  .caroussel-left {
+    align-items: center !important;
+    text-align: justify;
+  }
+}
+@media all and (max-width: 625px) {
+  .caroussel-left {
+    width: 80% !important;
   }
 }
 .bouton-box {
@@ -313,9 +336,9 @@ h1 {
 .caroussel-box-template {
   width: 1000px;
   height: 500px;
-  border: 3px solid #be9063;
   box-sizing: border-box;
-  box-shadow: 0px 0px 12px 2px rgba(160, 116, 116, 0.25);
+  border: 2px solid var(--brown);
+  border-radius: 20px;
   border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -325,6 +348,7 @@ h1 {
 .caroussel-content {
   display: flex;
   flex-wrap: wrap;
+
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -332,14 +356,20 @@ h1 {
 }
 .caroussel-right img {
   width: 500px;
+  box-shadow: 0px 0px 15px rgba(73, 73, 73, 0.342);
 }
 .caroussel-left {
-  width: 300px;
+  font-size: 20px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60%;
 }
 .caroussel-stack {
   display: flex;
   flex-wrap: wrap;
-  width: 350px;
+  width: 100%;
   justify-content: flex-start;
   align-items: center;
 }

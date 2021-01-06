@@ -13,9 +13,6 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import router from "./router";
 import store from "./store";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
-
 library.add(faFacebookSquare);
 library.add(faGithub);
 library.add(faInstagram);
@@ -28,9 +25,6 @@ Vue.component("font-awesome-icon", FontAwesomeIcon);
 Vue.config.productionTip = false;
 
 new Vue({
-  created() {
-    AOS.init();
-  },
   router,
   store,
   render: (h) => h(App),

@@ -105,11 +105,11 @@ export default {};
 }
 .boxAll {
   position: relative;
-  height: 86%;
-  overflow-y: scroll;
+  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
   padding-top: 130px;
   color: var(--txt);
 }
@@ -127,16 +127,44 @@ h1 {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 100px;
+  flex-wrap: nowrap;
   justify-content: center;
   align-items: flex-start;
+}
+
+@media all and (max-width: 1127px) {
+  .date {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100% !important;
+  }
+  .date p {
+    margin-right: 30px;
+  }
+  .box-item {
+    align-items: center !important;
+    margin-top: 190px !important;
+  }
+  .item {
+    margin: 20px 0 !important;
+    width: 80% !important;
+  }
+}
+@media all and (max-width: 856px) {
+  .box-item {
+    margin-top: 250px !important;
+  }
 }
 .item {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+
   justify-content: flex-start;
-  width: 70%;
+  width: auto;
 }
 .date {
   width: 200px;

@@ -120,6 +120,11 @@ export default {};
     flex: 1;
     justify-content: space-around !important;
   }
+  .pres,
+  .prog,
+  .bottom {
+    margin: 10px 0 !important;
+  }
 }
 @media all and (max-width: 1024px) {
   .svg {
@@ -138,6 +143,46 @@ export default {};
   }
   .bottom .svg {
     display: none !important;
+  }
+}
+@media all and (max-width: 904px) {
+  .prog {
+    width: 100% !important;
+  }
+  .tech {
+    justify-content: space-around !important;
+  }
+  .tech-item {
+    margin: 10px !important;
+  }
+  .bottom {
+    align-items: flex-start !important;
+  }
+  .pres {
+    align-items: center !important;
+    text-align: justify;
+  }
+  .passions {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: justify;
+  }
+  .passions {
+    margin-top: 50px;
+  }
+}
+@media all and (max-width: 500px) {
+  .pres {
+    width: 80% !important;
+  }
+  .passions p {
+    padding: 0 20px;
+  }
+  .pres,
+  .prog,
+  .bottom {
+    margin: 60px 0 !important;
   }
 }
 * {

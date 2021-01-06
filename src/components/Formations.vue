@@ -45,6 +45,14 @@ export default {};
     height: 87% !important;
   }
 }
+@media all and (max-width: 1404px) {
+  .svg {
+    position: absolute !important;
+    right: 100px;
+    top: 100px;
+  display: none;
+  }
+}
 @media all and (max-width: 1405px) {
 }
 .boxAll {
