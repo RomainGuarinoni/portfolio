@@ -68,8 +68,8 @@ export default {
           git: "https://github.com/RomainGuarinoni/synctube",
           description: [
             "<p> Ce site permet de<span style='color : var(--brown);'> regarder des vidéos youtube </span> avec des amis <span style='color : var(--brown);'> de manière synchronisé</span> </p>",
-            "<p>Lorsque qu'un utilisateur <span style='color : var(--brown);'>lance, met en pause ou avance la vidéo </span>, ces mise à jour se font <span style='color : var(--brown);'>automatiquement pour tous les autres utilisateurs </span>connectés</p>",
-            "<p>De plus, un <span style='color : var(--brown);'> système d'historique</span> permet de re regarder lees anciennes vidéos</p>",
+            "<p>Lorsque qu'un utilisateur <span style='color : var(--brown);'>lance, met en pause ou avance la vidéo </span>, ces mises à jours se font <span style='color : var(--brown);'>automatiquement pour tous les autres utilisateurs </span>connectés</p>",
+            "<p>De plus, un <span style='color : var(--brown);'> système d'historique</span> permet de re regarder les anciennes vidéos</p>",
           ],
           stack: [
             "Vue.js",
@@ -81,9 +81,9 @@ export default {
             "Heroku",
           ],
           fonctionnalite: [
-            "regarder une vidéo de youtube avec un url ou une vidéo de l'historique",
-            "Lire , mettre en pause et avancer la vidéo en synchronisation avec tous les utilisateurs",
-            "Un historique pour re regarder d'anciennes vidéos",
+            "regarder une vidéo  youtube avec une url ou une vidéo de l'historique",
+            "Lire , mettre en pause ou avancer la vidéo en synchronisation avec tous les utilisateurs",
+            "Un historique pour regarder d'anciennes vidéos",
             "bientot : un Chat pour parler avec les utilisateurs connectés",
           ],
         },

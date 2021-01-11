@@ -113,7 +113,7 @@ export default {
         {
           title: "Synctube",
           description:
-            "Une WebApp qui permet pour regarderr des vidéos youtube en parfaite synchronisation avec ses amis ! ",
+            "Une WebApp qui permet de regarder des vidéos youtube en parfaite synchronisation avec ses amis ! ",
           stack: [
             "Vue.js",
             "node.js",
