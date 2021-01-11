@@ -111,6 +111,21 @@ export default {
       index: 0,
       projets: [
         {
+          title: "Synctube",
+          description:
+            "Une WebApp qui permet pour regarderr des vidéos youtube en parfaite synchronisation avec ses amis ! ",
+          stack: [
+            "Vue.js",
+            "node.js",
+            "websocket",
+            "mongodb",
+            "express",
+            "youtube Api",
+            "Heroku",
+          ],
+          img: require("../assets/synctube.jpg"),
+        },
+        {
           title: "letsJam",
           description:
             "Une application pour gérer les réservations des salles de musique de mon école",
@@ -136,13 +151,6 @@ export default {
             "Un store pour pouvoir choisir des skins d'arme csgo au bon prix",
           stack: ["Vue.js", "gsap", "AOS", "github Pages"],
           img: require("../assets/steam.jpg"),
-        },
-
-        {
-          title: "Exam Answer Interface",
-          description: "une petite web App qui permet de faire des QCM",
-          stack: ["VHTML", "CSS", "javascript"],
-          img: require("../assets/qcm.jpg"),
         },
         {
           title: "Grapheur de fonctions mathématiques",

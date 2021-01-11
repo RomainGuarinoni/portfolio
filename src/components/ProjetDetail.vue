@@ -62,6 +62,32 @@ export default {
     return {
       projet: [
         {
+          title: "Synctube",
+          date: "Janvier 2021",
+          site: "https://synctube-online.herokuapp.com/",
+          git: "https://github.com/RomainGuarinoni/synctube",
+          description: [
+            "<p> Ce site permet de<span style='color : var(--brown);'> regarder des vidéos youtube </span> avec des amis <span style='color : var(--brown);'> de manière synchronisé</span> </p>",
+            "<p>Lorsque qu'un utilisateur <span style='color : var(--brown);'>lance, met en pause ou avance la vidéo </span>, ces mise à jour se font <span style='color : var(--brown);'>automatiquement pour tous les autres utilisateurs </span>connectés</p>",
+            "<p>De plus, un <span style='color : var(--brown);'> système d'historique</span> permet de re regarder lees anciennes vidéos</p>",
+          ],
+          stack: [
+            "Vue.js",
+            "node.js",
+            "websocket",
+            "mongodb",
+            "express",
+            "youtube Api",
+            "Heroku",
+          ],
+          fonctionnalite: [
+            "regarder une vidéo de youtube avec un url ou une vidéo de l'historique",
+            "Lire , mettre en pause et avancer la vidéo en synchronisation avec tous les utilisateurs",
+            "Un historique pour re regarder d'anciennes vidéos",
+            "bientot : un Chat pour parler avec les utilisateurs connectés",
+          ],
+        },
+        {
           title: "letsJam",
           date: "Décembre 2020",
           site: "https://letsjamimt.herokuapp.com/#/salle",
@@ -142,22 +168,7 @@ export default {
             "Animation avec GSAP et Animation On Scroll",
           ],
         },
-        {
-          title: "Exam Answer Interface",
-          date: "Octobre 2020",
-          site: "https://romainguarinoni.github.io/Exam_answer_interface/",
-          git: "https://github.com/RomainGuarinoni/Exam_answer_interface",
-          description: [
-            "<p> ce site est une petite web app qui permet de <span style='color : var(--brown);'> s'entrainer au Toeic</span> ou à tout autre examen sous forme de QCM</p>",
-            "<p>Il permet de voir nos résultat et de de <span style='color : var(--brown);'> s'entrainer plus rapidement </span> car il n'y a pas à tout écrire sur une feuille mais juste <span style='color : var(--brown);'>cliquer sur des boutons </span></p>",
-          ],
-          stack: ["HTML", "CSS", "javascript", "Github Pages"],
-          fonctionnalite: [
-            "selection du nombre de question et si besoin d'une question de départ et d'un pas",
-            "possibilité de customiser les couleurs des réponses",
-            "Darkmode pour s'entrainer la nuit",
-          ],
-        },
+
         {
           title: "Grapheur de fonctions mathématiques",
           date: "Mars 2020",
